@@ -49,6 +49,42 @@
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
 
+  const copyButton = document.querySelector(".copy-btn");
+  const copyStatus = document.querySelector(".copy-status");
+  const fallbackCopy = (text) => {
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.opacity = "0";
+    document.body.appendChild(area);
+    area.select();
+    const ok = document.execCommand("copy");
+    area.remove();
+    return ok;
+  };
+  const copyText = (text) =>
+    navigator.clipboard && window.isSecureContext
+      ? navigator.clipboard.writeText(text).then(() => true, () => fallbackCopy(text))
+      : Promise.resolve(fallbackCopy(text));
+  if (copyButton) {
+    let resetTimer;
+    copyButton.addEventListener("click", () => {
+      copyText(copyButton.dataset.copy).then((ok) => {
+        const label = copyButton.querySelector(".copy-label");
+        label.textContent = ok ? "Copied" : "Couldn't copy";
+        copyButton.classList.toggle("copied", ok);
+        if (copyStatus) copyStatus.textContent = ok ? "Email address copied" : "";
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(() => {
+          label.textContent = "Copy";
+          copyButton.classList.remove("copied");
+          if (copyStatus) copyStatus.textContent = "";
+        }, 2000);
+      });
+    });
+  }
+
   const now = new Date();
   const year = document.getElementById("year");
   if (year) year.textContent = now.getFullYear();

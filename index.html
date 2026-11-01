@@ -4,14 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tenzing Thundup Bhutia · Senior Frontend Engineer</title>
-<meta name="description" content="Senior Frontend Engineer in Bangalore. 7+ years building React, Next.js and TypeScript for Property Finder, realtor.com and traderjoes.com.">
+<meta name="description" content="Senior Frontend Engineer. 7+ years building React, Next.js and TypeScript for Property Finder, realtor.com and traderjoes.com.">
 <meta name="theme-color" content="#ffffff">
 <meta name="referrer" content="no-referrer">
 <link rel="canonical" href="https://tenzingbhutia.com/">
 <meta property="og:url" content="https://tenzingbhutia.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tenzing Thundup Bhutia · Senior Frontend Engineer">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f7a72'/%3E%3Ctext x='16' y='21.5' text-anchor='middle' font-family='Arial' font-size='14' font-weight='700' fill='white'%3ETB%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -38,6 +39,7 @@
     <li><a href="#skills">What I do<small>Where I'm most useful on a team</small></a></li>
     <li><a href="#work">Work<small>Products I've helped build</small></a></li>
     <li><a href="#experience">Experience<small><span data-yoe>7</span>+ years, three companies</small></a></li>
+    <li><a href="#education">Education<small>Degrees and papers</small></a></li>
     <li><a href="#contact">Contact<small>Let's talk</small></a></li>
   </ul>
   <ul class="menu-social">
@@ -50,7 +52,7 @@
 <header class="hero" id="top">
   <div class="hero-text">
     <p class="hello fade">Hello, my name is <span class="brand-color">Tenzing</span>.</p>
-    <h1 class="fade d1">I'm a <b>Senior Frontend Engineer</b> building <b>property</b> and <b>mortgage</b> products for the web, from Bangalore, India.</h1>
+    <h1 class="fade d1">I'm a <b>Senior Frontend Engineer</b> building <b>fast</b>, <b>accessible</b> and <b>scalable</b> web products used by <b>millions</b> of people worldwide.</h1>
     <div class="hero-cta fade d2">
       <a class="btn" href="#work">See my work</a>
       <a class="link" href="resume.pdf" target="_blank">Résumé <span aria-hidden="true">→</span></a>
@@ -209,15 +211,31 @@
             <p>UI architecture with React, Redux and TypeScript, ADA/WCAG compliance, a reusable Virtual Experiences component library.</p>
           </div>
         </li>
+      </ol>
+      <a class="btn outline reveal" href="resume.pdf" target="_blank">Download résumé</a>
+    </div>
+  </section>
+
+  <section id="education" class="section compact">
+    <div class="container">
+      <h2 class="title small reveal">Education</h2>
+      <ol class="edu-list">
         <li class="reveal">
-          <p class="when">2012 – 2019</p>
+          <p class="when">2017 – 2019</p>
           <div>
-            <h3>Education</h3>
-            <p>M.Tech, Computer Science · NIT Rourkela<br>B.Tech, Information Technology · Sikkim Manipal Institute of Technology</p>
+            <h3>M.Tech, Computer Science</h3>
+            <p class="client">National Institute of Technology (NIT), Rourkela</p>
+            <p class="edu-note">Published 2 conference papers on IoT health-sensor networks: <a href="https://ieeexplore.ieee.org/document/9032732" target="_blank" rel="noreferrer noopener">WiSPNET 2019</a> · <a href="https://dspace.nitrkl.ac.in/dspace/handle/2080/3276" target="_blank" rel="noreferrer noopener">I2CT 2019</a></p>
+          </div>
+        </li>
+        <li class="reveal">
+          <p class="when">2012 – 2016</p>
+          <div>
+            <h3>B.Tech, Information Technology</h3>
+            <p class="client">Sikkim Manipal Institute of Technology</p>
           </div>
         </li>
       </ol>
-      <a class="btn outline reveal" href="resume.pdf" target="_blank">Download résumé</a>
     </div>
   </section>
 
@@ -225,7 +243,15 @@
     <div class="container">
       <h2 class="title reveal">Let's <span>talk</span>.</h2>
       <p class="contact-lead reveal">Whether it's a role, a project or just a chat about frontend, I'd be happy to hear from you. Email is the quickest way to reach me.</p>
-      <a class="email reveal" href="mailto:thundupttb@gmail.com">thundupttb@gmail.com</a>
+      <div class="email-row reveal">
+        <a class="email" href="mailto:thundupttb@gmail.com">thundupttb@gmail.com</a>
+        <button class="copy-btn" type="button" data-copy="thundupttb@gmail.com" aria-label="Copy email address">
+          <svg class="i-copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <svg class="i-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          <span class="copy-label">Copy</span>
+        </button>
+      </div>
+      <p class="copy-status" role="status" aria-live="polite"></p>
       <ul class="contact-links reveal">
         <li><a href="https://www.linkedin.com/in/tenzing-thundup" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
         <li><a href="https://github.com/thundup" target="_blank" rel="noreferrer noopener">GitHub</a></li>
